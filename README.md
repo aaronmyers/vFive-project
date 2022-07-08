@@ -1,6 +1,6 @@
 # vFive project repository
 
-Project prompt:
+## Project prompt:
 
 Here's the work sample question statement:
 
@@ -25,12 +25,12 @@ The end result is a function `f(x)`, where `x` is an array of criteria (e.g. `["
 
 3 hours total
 
-1 hour: read prompt, think through assumptions and questions, identify potential solutions
-milestone (1 hour): decide on solution
-1 hour: attempt MVP of first idea
-milestone(2 hours): if solution not working, decide to pivot to another solution or keep going
-45 mins: continue work on solution
-15 mins: pause to push code, write what I would have done with more time and any other documentation
+1. 1 hour: read prompt, think through assumptions and questions, identify potential solutions
+2. milestone (1 hour): decide on solution
+3. 1 hour: attempt MVP of first idea
+4. milestone(2 hours): if solution not working, decide to pivot to another solution or keep going
+5. 45 mins: continue work on solution
+6. 15 mins: pause to push code, write what I would have done with more time and any other documentation
 
 
 
