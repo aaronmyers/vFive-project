@@ -84,3 +84,5 @@ This is risky given the role is AI based, but creating an AI MVP here that I'm c
 1. run pip install for requirements
 2. ensure the local data file is stores as 'nytdata.csv'
 3. run the `return_text.py` file
+
+The `return_text.py` file can be imported or run directly (import `function_to_run`. 
