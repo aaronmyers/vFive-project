@@ -78,6 +78,7 @@ This is risky given the role is AI based, but creating an AI MVP here that I'm c
 2. Be more thoughtful about data cleaning, inputs, and outputs.
 3. Whiteboard some solution options with my network of talented engineers over some drinks :)
 4. I largely used only the correlation matrix given the time constraints, would be nice to investigate using the singular values and vectors more.
+5. I reversed the assumption number 1 in the assmption list above after a clarification email from Siamak.
 
 
 ## How to run this:
