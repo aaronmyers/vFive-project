@@ -46,15 +46,16 @@ def function_to_run(array_of_search_criteria):
 
 
         # return the columns wrapped in static text
-        print("This area is also known for scoring high on {}".format(" ".join(str(x) for x in relevant_columns + ", ")))
-        return "This area is also known for scoring high on {}".format(" ".join(str(x) for x in relevant_columns + ", "))
+        print("This area is also known for scoring high on {}".format(', '.join([' '.join(str(x).split()[:-1]) for x in relevant_columns + ', '])))
+        return "This area is also known for scoring high on {}".format(', '.join([' '.join(str(x).split()[:-1]) for x in relevant_columns + ', ']))
     except:
         print("Error with computing additional criteria, there might not be any")
         return "Error with computing additional criteria, there might not be any"
     
 
-function_to_run(["Densely Populated Score", "Low Crime Score"])
-function_to_run(["Densely Populated Score", "latitude"])
-function_to_run(["latitude"])
+if __name__ == "__main__":
+    function_to_run(["Densely Populated Score", "Low Crime Score"])
+    function_to_run(["Densely Populated Score", "latitude"])
+    function_to_run(["latitude"])
 
 
