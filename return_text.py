@@ -8,7 +8,8 @@ def function_to_run(array_of_search_criteria):
         df = pandas.read_csv('nytdata.csv')
         
         # Drop columns that I will ignore for now although it will exclude columns explicitly referenced in the prompt. This is simply a priority decision, I would not exclude in a real scenario
-        df = df.drop(['latitude', 'longitude','State Code','Region','ID', 'name', 'State Name', 'Image', 'How Expensive','Location'],1)
+        data_used = ['latitude', 'longitude','State Code','Region','ID', 'name', 'State Name', 'Image', 'How Expensive','Location']
+        df = df.drop(data_used,1)
         
         # Dropping nans and normalizing the data
         cleaned_df = df.dropna()
@@ -20,7 +21,7 @@ def function_to_run(array_of_search_criteria):
         
         covariance_matrix = pca.get_covariance()
 
-        data_used = ['latitude', 'longitude','State Code','Region','ID', 'name', 'State Name', 'Image', 'How Expensive','Location']
+
 
         #### ACTUAL COMPUATION ##
         # remove variables that we drop originally
@@ -33,7 +34,7 @@ def function_to_run(array_of_search_criteria):
         matrix_to_check[matrix_to_check >0.99]=0
         matrix_to_check[matrix_to_check <-0.99]=0
 
-        # take the colums with the max 3 values
+        # take the colums with the max value
         max_val_list=[]
         max_index= []
         for i in range(0,np.shape(matrix_to_check)[0]):
@@ -41,7 +42,7 @@ def function_to_run(array_of_search_criteria):
             max_index.append(np.where(matrix_to_check[i]==max_val_list[i])[0][0])
 
 
-        # grab the associated column
+        # grab the associated columns
         relevant_columns = normalized_df.columns[max_index]
 
 
